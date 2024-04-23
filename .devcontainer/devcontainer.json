@@ -1,0 +1,32 @@
+{
+    "name": "cpp-and-rust",
+    "build": {
+        "context": "..",
+        "dockerfile": "${localWorkspaceFolder}/Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash", 
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash"
+                    }
+                }
+            },
+            "extensions": [
+                "ms-vscode.cmake-tools",
+                "jeff-hykin.better-cpp-syntax",
+                "ms-vscode.cpptools-extension-pack",
+                "twxs.cmake",
+                "ms-azuretools.vscode-docker",
+                "streetsidesoftware.code-spell-checker",
+                "tamasfe.even-better-toml",
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    },
+    "remoteUser": "developer",
+    "mounts": ["source=cpp-vs-rust,target=/home/developer/development,type=volume"],
+    "workspaceFolder": "/home/developer/development",
+}
